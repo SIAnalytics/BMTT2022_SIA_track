@@ -15,7 +15,7 @@ with open(labeled_source_datat, 'r') as f:
     l_s = json.load(f)
 
 for i in pu_t['images']:
-    i['id'] += 7591790
+    i['id'] += 7591790 # source dataset 
     i['frame_n']=[]
     i['cam_world_pos'] = []
     i['cam_world_rot'] = []
