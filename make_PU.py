@@ -2,8 +2,8 @@ import glob
 import shutil
 import os
 
-path = glob.glob("/workspace/PU/ByteTrack/YOLOX_outputs/yolox_x_mot17_half/track_results/*")
-path2 = glob.glob('/workspace/PU/ByteTrack/datasets/mot/train/*/gt')
+path = glob.glob("/workspace/PU/ByteTrack/YOLOX_outputs/yolox_x_mot17_half/track_results/*") # pseudo label
+path2 = glob.glob('/workspace/PU/ByteTrack/datasets/mot/train/*/gt') # train gt path
 
 for i in path:
     for j in path2:
