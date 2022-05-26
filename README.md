@@ -6,7 +6,6 @@
 
 #### ByteTrack is a simple, fast and strong multi-object tracker.
 
-<p align="center"><img src="assets/sota.png" width="500"/></p>
 
 > [**ByteTrack: Multi-Object Tracking by Associating Every Detection Box**](https://arxiv.org/abs/2110.06864)
 > 
