@@ -3,6 +3,7 @@ import numpy as np
 from pycocotools.coco import COCO
 
 import os
+import albumentations as A
 
 from ..dataloading import get_yolox_datadir
 from .datasets_wrapper import Dataset
@@ -45,6 +46,15 @@ class MOTDataset(Dataset):
         self.name = name
         self.img_size = img_size
         self.preproc = preproc
+        self.albu = A.Compose([
+            #A.CLAHE(always_apply=True, p=1.0, clip_limit=(1, 6), tile_grid_size=(24, 24)),
+            A.CoarseDropout(max_holes=8, max_height=60, max_width=100, min_holes=1, min_height=30, min_width=50, p=0.9),
+            #A.Downscale(scale_min=0.17000000178813934, scale_max=0.9900000095367432, interpolation=0, p =0.7),
+            #A.ImageCompression(p=0.7, quality_lower=9, quality_upper=100, compression_type=0),
+            #A.MultiplicativeNoise(p=0.7, multiplier=(1.5, 1.5), per_channel=True, elementwise=True),
+            #A.MotionBlur(always_apply=False, p=0.5, blur_limit=(3, 23)),
+            #A.GaussNoise(p=0.7, var_limit=(0.0, 500.0))
+        ]) # Model soup
 
     def __len__(self):
         return len(self.ids)
@@ -99,9 +109,11 @@ class MOTDataset(Dataset):
             self.data_dir, self.name, file_name
         )
         img = cv2.imread(img_file)
+        t_img = self.albu(image=img)
+        t_img = t_img['image']
         assert img is not None
 
-        return img, res.copy(), img_info, np.array([id_])
+        return t_img, res.copy(), img_info, np.array([id_])
 
     @Dataset.resize_getitem
     def __getitem__(self, index):
