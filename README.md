@@ -27,6 +27,5 @@ python3 ./tools/convert_mot17_to_coco_pu.py
 ```
 - **Stage3.** Make multiple fine-tune model and model soup
 ```
-TODO
-
+python3 model_soup.py
 ```
