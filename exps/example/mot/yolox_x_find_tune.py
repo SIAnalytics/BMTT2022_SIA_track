@@ -28,6 +28,7 @@ class Exp(MyExp):
         self.no_aug_epochs = 0
         self.basic_lr_per_img = 0.0001 / 64.0
         self.warmup_epochs = 0
+        self.ema = False
 
     def get_data_loader(self, batch_size, is_distributed, no_aug=False):
         from yolox.data import (
