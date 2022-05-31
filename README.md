@@ -2,6 +2,18 @@
 
 We used the MOTSynth official data extraction [pipelines](https://github.com/dvl-tum/motsynth-baselines/blob/main/docs/DATA_PREPARATION.md).
 
+```
+datasets
+   |——————mot (MOT17)
+   |        └——————train
+   |        └——————test
+   └——————motsynth
+   |         └——————annotations
+   |         └——————comb_annotations
+   |         └——————frames
+   └——————data_path
+```
+
 ## Training
 
 To reproduce the performance, you need 8 GPUs with no less than 40G memory.
