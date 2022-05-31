@@ -43,10 +43,10 @@ python3 tools/train.py -f exps/example/mot/yolox_x_mixed_training.py -d 8 -b 48 
 python3 tools/track.py -f exps/example/mot/yolox_x_mix_det.py -c pretrained/mixed.pth.tar -b 1 -d 1 --fp16 --fuse
 python3 tools/interpolation.py
 python3 make_PU.py
-python3 ./tools/convert_mot17_to_coco_pu.py # We removed values with confidence less than 0.5 (L 108 in ./tools/convert_mot17_to_coco_pu.py) because predictions with low confidence can act as label noise.
+python3 ./tools/convert_mot17_to_coco_pu.py # We removed values with confidence less than 0.7 (L 108 in ./tools/convert_mot17_to_coco_pu.py) because predictions with low confidence can act as label noise.
 ``` 
 - **Stage3.** Make multiple fine-tune model and model soup # when fine-tuned, the EMA is not used.
-- 
+
 (Note that when performing fine-tune in Step 3, the augmentation combination should be different in L49-57 of ./yolox/data/datasets/mot.py)
 
 ```
