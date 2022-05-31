@@ -1,6 +1,6 @@
 ## Data Prepare
 
-We used the MOTSynth official data extraction [pipelines](https://github.com/dvl-tum/motsynth-baselines/blob/main/docs/DATA_PREPARATION.md).
+We used the MOTSynth official data extraction [pipelines](https://drive.google.com/drive/folders/1edc3XEYMQlVSWkuEiGYyBdUAKI5MYz2O?usp=sharing).
 
 ```
 datasets
