@@ -49,5 +49,5 @@ python3 ./tools/convert_mot17_to_coco_pu.py # We removed values with confidence 
 (Note that when performing fine-tune in Step 3, the augmentation combination should be different in L49-57 of ./yolox/data/datasets/mot.py)
 
 ```
-python3 model_soup.py # you have to adjust it manually. (Until the CVPR22 conference, the completed code will be uploaded.)
+python3 wa.py # you have to adjust it manually. (Until the CVPR22 conference, the completed code will be uploaded.)
 ```
