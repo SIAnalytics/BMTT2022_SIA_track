@@ -8,11 +8,15 @@ datasets
    |        └——————train
    |        └——————test
    └——————motsynth
+   |         └——————MOT17-02-DPM
+   |         └——————MOT17-04-DPM
+   |         └——————...
    |         └——————annotations
    |         └——————comb_annotations
    |         └——————frames
    └——————data_path
 ```
+![image](https://user-images.githubusercontent.com/33244972/171125695-38f0b3e7-2a47-42c4-9740-18f530919a2b.png)
 
 ## Training
 
