@@ -1,6 +1,6 @@
 ## Data Prepare
 
-We used the MOTSynth official data extraction [pipelines](https://drive.google.com/drive/folders/1edc3XEYMQlVSWkuEiGYyBdUAKI5MYz2O?usp=sharing).
+We used the MOTSynth official data extraction [pipelines](https://github.com/dvl-tum/motsynth-baselinesz).
 
 ```
 datasets
@@ -22,7 +22,7 @@ datasets
 
 To reproduce the performance, you need 8 GPUs with no less than 40G memory.
 
-- **Stage1.** Training warm_up model with below script, or download [warm-up model](-) (58.1 HOTA), and save it in
+- **Stage1.** Training warm_up model with below script, or download [warm-up model](https://drive.google.com/drive/folders/1edc3XEYMQlVSWkuEiGYyBdUAKI5MYz2O?usp=sharing) (58.1 HOTA), and save it in
 ```
 python3 tools/train.py -f exps/example/mot/yolox_x_warm_up.py -d 8 -b 48 --fp16 -o
 ```
