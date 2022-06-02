@@ -1,3 +1,8 @@
+## Install
+
+Follow the official [repo](https://github.com/ifzhang/ByteTrack) to install bytetrack.
+
+
 ## Data Prepare
 
 We used the MOTSynth official data extraction [pipelines](https://github.com/dvl-tum/motsynth-baselinesz).
