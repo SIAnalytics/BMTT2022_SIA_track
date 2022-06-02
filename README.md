@@ -57,20 +57,20 @@ python3 wa.py # you have to adjust it manually. (Until the CVPR22 conference, th
 
 ```
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/warm-up_67.5.pth.tar -b 1 -d 1 --fp16 --fuse
-python3 tools/interpolation.py
+python3 tools/interpolation.py # HOTA 58.1
 ```
 
 ```
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/stage2_69.6.pth.tar -b 1 -d 1 --fp16 --fuse
-python3 tools/interpolation.py
+python3 tools/interpolation.py # HOTA 59.xx
 ```
 
 ```
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/stage3_75.7.pth.tar -b 1 -d 1 --fp16 --fuse
-python3 tools/interpolation.py
+python3 tools/interpolation.py # HOTA 62.xx
 ```
 
 ```
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/stage3_77.9.pth.tar -b 1 -d 1 --fp16 --fuse
-python3 tools/interpolation.py
+python3 tools/interpolation.py # HOTA 63.xx
 ```
