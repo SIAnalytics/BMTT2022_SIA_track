@@ -71,6 +71,7 @@ python3 tools/interpolation.py # HOTA 59.xx
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/stage3_75.7.pth.tar -b 1 -d 1 --fp16 --fuse
 python3 tools/interpolation.py # HOTA 62.xx
 ```
+![image](https://user-images.githubusercontent.com/33244972/171544560-3063f81e-075a-4a06-a09d-f899fff29d46.png)
 
 ```
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/stage3_77.9.pth.tar -b 1 -d 1 --fp16 --fuse
