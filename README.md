@@ -59,6 +59,7 @@ python3 wa.py # you have to adjust it manually. (Until the CVPR22 conference, th
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/warm-up_67.5.pth.tar -b 1 -d 1 --fp16 --fuse
 python3 tools/interpolation.py # HOTA 58.1
 ```
+![image](https://user-images.githubusercontent.com/33244972/171542787-c3a84452-b54c-4fb6-919e-cccef222153d.png)
 
 ```
 python3 tools/track.py -f exps/example/mot/yolox_x_source_only.py -c weight/stage2_69.6.pth.tar -b 1 -d 1 --fp16 --fuse
