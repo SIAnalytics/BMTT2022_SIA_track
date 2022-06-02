@@ -1,3 +1,8 @@
+## Release Note
+
+CBAM and mixedstyle will be merged soon. Everything else has been uploaded.
+
+
 ## Install
 
 Follow the official [repo](https://github.com/ifzhang/ByteTrack) to install bytetrack.
