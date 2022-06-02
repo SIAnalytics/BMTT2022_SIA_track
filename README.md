@@ -42,6 +42,7 @@ python3 tools/track.py -f exps/example/mot/yolox_x_mix_det.py -c weight/warm-up.
 python3 tools/interpolation.py
 python3 make_PU.py
 python3 ./tools/convert_mot17_to_coco_pu.py
+python3 merge_json.py
 ```
 
 - **Stage2.** Cross-domain Mixed Sampling with mosaic augmentation
