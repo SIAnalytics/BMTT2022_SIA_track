@@ -1,7 +1,7 @@
 import json
 
 labeled_source_datat = './datasets/motsynth/comb_annotations/train.json'
-pseudo_labeled_target_data = './datasets/mot/annotations/train.json' # <- pseudo label path
+pseudo_labeled_target_data = './datasets/mot/annotations/pseudo_train.json' # <- pseudo label path
 
 
 with open(pseudo_labeled_target_data, 'r') as f:
