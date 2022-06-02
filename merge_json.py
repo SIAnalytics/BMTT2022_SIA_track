@@ -1,4 +1,5 @@
 import json
+import copy
 
 labeled_source_datat = './datasets/motsynth/comb_annotations/train.json'
 pseudo_labeled_target_data = './datasets/mot/annotations/pseudo_train.json' # <- pseudo label path
@@ -10,24 +11,24 @@ with open(pseudo_labeled_target_data, 'r') as f:
 with open(labeled_source_datat, 'r') as f:
     l_s = json.load(f)
 
-print(len(l_s['images']))
-print(len(l_s['annotations']))
-print(len(pu_t))
+print('before Number of Images:', len(l_s['images']))
+print('before Number of Instance:', len(l_s['annotations']))
 
 
 for over in range(20):
+    tmp_pu_t = copy.deepcopy(pu_t)
     for i in pu_t['images']:
         i['id'] += 7591790 + over*len(pu_t['images'])# source dataset 
         i['frame_n']=[]
         i['cam_world_pos'] = []
         i['cam_world_rot'] = []
         i['ignore_mask'] = []
-        i['height'] = 1080
-        i['width'] = 1920
+        #i['height'] = 1080
+        #i['width'] = 1920
         i['description'] = []
         i['version'] = []
-        i['img_height'] = 1080
-        i['img_width'] = 1920
+        i['img_height'] = i['height']
+        i['img_width'] = i['width']
         i['seq_name'] = 'mot'
         i['is_night'] = 0
         i['weather'] = 'CLEAR'
@@ -60,4 +61,7 @@ for over in range(20):
 
 with open("mixed_sample.json", "w") as json_file:
     json.dump(l_s, json_file)
+
+print('after Number of Images:', len(l_s['images']))
+print('after Number of Instance:',len(l_s['annotations']))
 
