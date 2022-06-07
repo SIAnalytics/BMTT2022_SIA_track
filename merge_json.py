@@ -13,6 +13,8 @@ with open(labeled_source_datat, 'r') as f:
 
 print('before Number of Images:', len(l_s['images']))
 print('before Number of Instance:', len(l_s['annotations']))
+print('over image:', 20*len(pu_t['images']))
+print('over instance:', 20*len(pu_t['annotations']))
 
 
 for over in range(20):
