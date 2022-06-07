@@ -1,7 +1,7 @@
 ## Release Note
 
 CBAM and mixedstyle will be merged soon. Everything else has been uploaded.
-
+bugfix : merge_json.py : 22-06-07
 
 ## Install
 
