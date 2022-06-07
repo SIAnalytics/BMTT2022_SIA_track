@@ -48,7 +48,7 @@ for over in range(20):
 
     for i in pu_t['annotations']:
         i['id'] += 7591790046917 + over*len(pu_t['annotations'])
-        i['image_id'] += 7591790
+        i['image_id'] += 7591790 + over*len(pu_t['images'])
         i['segmentation'] = {}
         i['keypoints'] = []
         i['keypoints_3d'] = []
