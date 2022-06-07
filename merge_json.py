@@ -18,7 +18,7 @@ print('before Number of Instance:', len(l_s['annotations']))
 for over in range(20):
     tmp_pu_t = copy.deepcopy(pu_t)
     for i in pu_t['images']:
-        i['id'] += 7591790 + over*len(pu_t['images'])# source dataset 
+        i['id'] += 7591790000 + over*len(pu_t['images'])# source dataset 
         i['frame_n']=[]
         i['cam_world_pos'] = []
         i['cam_world_rot'] = []
@@ -41,14 +41,12 @@ for over in range(20):
         i['fy'] = '1158'
         i['cx'] = '960'
         i['cy'] = '540'
-        #i.pop('prev_image_id')
-        #i.pop('next_image_id')
-        #i.pop('video_id')
+
         l_s['images'].append(i)
 
     for i in pu_t['annotations']:
         i['id'] += 7591790046917 + over*len(pu_t['annotations'])
-        i['image_id'] += 7591790 + over*len(pu_t['images'])
+        i['image_id'] += 7591790000 + over*len(pu_t['images'])
         i['segmentation'] = {}
         i['keypoints'] = []
         i['keypoints_3d'] = []
